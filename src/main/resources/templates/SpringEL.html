@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringEL</title>
+</head>
+<body>
+  <ul>
+    <li><span th:text="${user.name}"></span></li>
+    <li><span th:text="${user['name']}"></span></li>
+    <li><span th:text="${user.getName()}"></span></li>
+  </ul>
+  <ul>
+    <li><span th:text="${userList[0].name}"></span></li>
+  </ul>
+  <ul>
+    <li><span th:text="${userMap['식객'].name}"></span></li>
+  </ul>
+
+</body>
+</html>
