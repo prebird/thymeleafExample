@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="footer">
+        <h1>test</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>구분</th>
+                <th>내용</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>강아지</td>
+                <td>포치타</td>
+            </tr>
+        </table>
+    </div>
+    <div th:fragment="footerParam (dog, master)">
+        <span>강아지 : </span>
+        <span th:text="${dog}"></span>
+        <br>
+        <span>주인 : </span>
+        <span th:text="${master}"></span>
+    </div>
+</body>
+</html>

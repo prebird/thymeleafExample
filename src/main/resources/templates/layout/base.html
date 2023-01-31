@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="baseHeader (title, links)">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="http://www.aaaa.com">
+    <link rel="stylesheet" href="http://www.bbbb.com">
+
+    <th:block th:replace="${links}" />
+</head>
