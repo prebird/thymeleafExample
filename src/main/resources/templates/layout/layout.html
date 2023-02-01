@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:fragment="layout (title, content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:replace="${title}">Title</title>
+</head>
+<body>
+  <div>공통 header 부분</div>
+
+  <!--  변경-->
+  <div th:replace="content"></div>
+
+  <footer>
+    <h1>footer 입니다.</h1>
+  </footer>
+</body>
+</html>

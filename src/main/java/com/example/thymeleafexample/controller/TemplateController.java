@@ -15,8 +15,13 @@ public class TemplateController {
     }
 
     @GetMapping("/layout")
-    public String layoutTest(Model model) {
+    public String layoutTest() {
         return "layoutMain";
+    }
+
+    @GetMapping("/layoutExtend")
+    public String layoutTest2() {
+        return "layoutMain2";
     }
 
 }
