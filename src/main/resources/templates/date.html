@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:fragment="layout (title, content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+  <p th:text="${todayDate}"></p>
+  <p th:text="${todayDateTime}"></p>
+  <p th:text="${#temporals.day(todayDateTime)}"></p>
+  <p th:text="${#temporals.month(todayDateTime)}"></p>
+  <p th:text="${#temporals.monthName(todayDateTime)}"></p>
+  <p th:text="${#temporals.dayOfWeek(todayDateTime)}"></p>
+  <p th:text="${#temporals.dayOfWeekNameShort(todayDateTime)}"></p>
+  <p th:text="${#temporals.hour(todayDateTime)}"></p>
+</body>
+</html>
