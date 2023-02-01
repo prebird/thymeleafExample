@@ -69,4 +69,10 @@ public class BaseController {
         return "url";
     }
 
+    @GetMapping("literal")
+    public String literal(Model model) {
+        model.addAttribute("data", "홍길동");
+        return "literal";
+    }
+
 }
