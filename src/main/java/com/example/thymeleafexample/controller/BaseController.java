@@ -75,4 +75,11 @@ public class BaseController {
         return "literal";
     }
 
+    @GetMapping("operator")
+    public String operator(Model model) {
+        model.addAttribute("nullData", null);
+        model.addAttribute("data", "spring!!");
+        return "operator";
+    }
+
 }
