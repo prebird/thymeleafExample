@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -52,6 +53,13 @@ public class BaseController {
         public String hello(String text) {
             return "HI MY NAME IS " + text;
         }
+    }
+
+    @GetMapping("date")
+    public String date(Model model) {
+        model.addAttribute("todayDate", LocalDateTime.now());
+        model.addAttribute("todayDateTime", LocalDateTime.now());
+        return "date";
     }
 
 }
