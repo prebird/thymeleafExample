@@ -82,4 +82,9 @@ public class BaseController {
         return "operator";
     }
 
+    @GetMapping("attribute")
+    public String attribute() {
+        return "attribute";
+    }
+
 }
