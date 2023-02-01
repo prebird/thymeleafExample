@@ -1,10 +1,12 @@
 package com.example.thymeleafexample.controller;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,4 +40,18 @@ public class BaseController {
 
         return "springEL";
     }
+
+    @GetMapping("basicObject")
+    public String basicObject(HttpSession session) {
+        session.setAttribute("sessionData", "iopen");
+        return "basic-object";
+    }
+
+    @Component("helloBean")
+    public class HelloBean {
+        public String hello(String text) {
+            return "HI MY NAME IS " + text;
+        }
+    }
+
 }
