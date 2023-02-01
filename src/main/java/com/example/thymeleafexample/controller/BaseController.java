@@ -62,4 +62,11 @@ public class BaseController {
         return "date";
     }
 
+    @GetMapping("url")
+    public String url(Model model) {
+        model.addAttribute("itemId", "ITEM1234");
+        model.addAttribute("page", 1);
+        return "url";
+    }
+
 }

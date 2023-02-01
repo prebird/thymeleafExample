@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>url</title>
+</head>
+<body>
+  <ul>
+    <li><a th:href="@{/hello}">url</a></li>
+    <li><a th:href="@{/hello(itemId=${itemId}, page=${page})}">QueryString</a></li>
+    <li><a th:href="@{/hello/{itemId}/{page}(itemId=${itemId}, page=${page})}">PathVariable</a></li>
+    <li><a th:href="@{/hello/{itemId}(itemId=${itemId}, page=${page})}">Mix</a></li>
+  </ul>
+
+</body>
+</html>
