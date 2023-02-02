@@ -87,4 +87,19 @@ public class BaseController {
         return "attribute";
     }
 
+    @GetMapping("each")
+    public String each(Model model) {
+        addUsers(model);
+        return "each";
+    }
+
+    private void addUsers(Model model) {
+        ArrayList<User> users = new ArrayList<>();
+        users.add(new User("user1", 10));
+        users.add(new User("user2", 30));
+        users.add(new User("user3", 40));
+        model.addAttribute("users", users);
+    }
+
+
 }
