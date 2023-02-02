@@ -15,5 +15,18 @@
       <td th:text="${user.age}"></td>
     </tr>
   </table>
+  <hr/>
+  <table th:border="1">
+    <tr>
+      <th>No</th>
+      <th>이름</th>
+      <th>나이</th>
+    </tr>
+    <tr th:each="user, userStat : ${users}">
+      <td th:text="${userStat.count}"></td>
+      <td th:text="${user.name}"></td>
+      <td th:text="${user.age}"></td>
+    </tr>
+  </table>
 </body>
 </html>
