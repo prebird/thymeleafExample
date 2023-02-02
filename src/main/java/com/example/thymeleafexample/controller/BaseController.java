@@ -101,5 +101,10 @@ public class BaseController {
         model.addAttribute("users", users);
     }
 
+    @GetMapping("condition")
+    public String condition(Model model) {
+        addUsers(model);
+        return "condition";
+    }
 
 }

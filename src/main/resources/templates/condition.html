@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>condition</title>
+</head>
+<body>
+  <h1>조건식</h1>
+  <table th:border="1">
+    <tr>
+      <th>No</th>
+      <th>이름</th>
+      <th>나이</th>
+      <th>비고</th>
+    </tr>
+    <tr th:each="user, userStat : ${users}">
+      <td th:text="${userStat.count}"></td>
+      <td th:text="${user.name}"></td>
+      <td th:text="${user.age}"></td>
+      <td>
+        <span th:text="'미성년자'" th:if="${user.age lt 20}"></span>
+        <span th:text="'미성년자'" th:unless="${user.age ge 20}"></span>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
