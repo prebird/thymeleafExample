@@ -107,4 +107,10 @@ public class BaseController {
         return "condition";
     }
 
+    @GetMapping("block")
+    public String block(Model model) {
+        addUsers(model);
+        return "block";
+    }
+
 }
