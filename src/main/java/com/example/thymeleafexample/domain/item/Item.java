@@ -2,6 +2,8 @@ package com.example.thymeleafexample.domain.item;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Item {
 
@@ -9,6 +11,10 @@ public class Item {
     private String itemName;
     private Integer price;
     private Integer quantity;
+    private Boolean open;
+    private List<String> regions;
+    private String itemType;
+    private String deliveryCode;
 
     public Item() {
     }
