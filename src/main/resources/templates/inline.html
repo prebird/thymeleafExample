@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>inline</title>
+</head>
+<body>
+<!--자바스크립트 인라인 사용 전-->
+<script>
+  var name = [[${user.name}]];
+  var age = [[${user.age}]];
+
+  // 자바스크립트 내추럴 템플릿
+  var name2 = /*[[${user.name}]]*/ "test username";
+
+  // 객체
+  var user = [[${user}]];
+</script>
+
+<!-- 자바스크립트 인라인 사용 후-->
+<script th:inline="javascript">
+  var name = [[${user.name}]];
+  var age = [[${user.age}]];
+
+  // 자바스크립트 내추럴 템플릿
+  var name2 = /*[[${user.name}]]*/ "test username";
+
+  // 객체
+  var user = [[${user}]];
+</script>
+
+
+
+</body>
+</html>

@@ -113,4 +113,10 @@ public class BaseController {
         return "block";
     }
 
+    @GetMapping("inline")
+    public String inline(Model model) {
+        addUsers(model);
+        return "inline";
+    }
+
 }
