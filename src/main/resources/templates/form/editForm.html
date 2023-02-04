@@ -35,6 +35,25 @@
             <label for="quantity">수량</label>
             <input type="text" id="quantity"  th:field="*{quantity}" class="form-control" value="10">
         </div>
+        <!-- Multi checkbox-->
+        <div>
+            <div>등록 지역</div>
+            <div th:each="region : ${regions}" class="form-check form-check-inline">
+                <input type="checkbox" th:field="*{regions}" th:value="${region.key}" class="form-check-input">
+                <label th:for="${#ids.prev('regions')}"
+                       th:text="${region.value}" class="form-check-label">서울</label>
+            </div>
+        </div>
+        <!-- Radio button -->
+        <div>
+            <div>상품 종류</div>
+            <div th:each="type : ${itemTypes}" class="form-check form-check-inline">
+                <input type="radio" th:field="*{itemType}" th:value="${type.name()}" class="form-check-input">
+                <label th:for="${#ids.prev('itemType')}" th:text="${type.getDescription()}" class="form-check-label">
+                    BOOK
+                </label>
+            </div>
+        </div>
 
         <hr class="my-4">
 

@@ -41,6 +41,25 @@
         <input type="checkbox" id="open" th:field="${item.open}" class="form-check-input" disabled>
         <label for="open" class="form-check-label">판매 오픈</label>
     </div>
+    <!-- Multi checkbox-->
+    <div>
+        <div>등록 지역</div>
+        <div th:each="region : ${regions}" class="form-check form-check-inline">
+            <input type="checkbox" th:field="${item.regions}" th:value="${region.key}" class="form-check-input">
+            <label th:for="${#ids.prev('regions')}"
+                   th:text="${region.value}" class="form-check-label">서울</label>
+        </div>
+    </div>
+    <!-- Radio button -->
+    <div>
+        <div>상품 종류</div>
+        <div th:each="type : ${itemTypes}" class="form-check form-check-inline">
+            <input type="radio" th:field="${item.itemType}" th:value="${type.name()}" class="form-check-input">
+            <label th:for="${#ids.prev('itemType')}" th:text="${type.getDescription()}" class="form-check-label">
+                BOOK
+            </label>
+        </div>
+    </div>
 
     <hr class="my-4">
 
